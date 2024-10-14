@@ -15,7 +15,6 @@ function App() {
         <SideBar />
         <MainContent />
       </div>
-      <div></div>
     </div>
   );
 }
