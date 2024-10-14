@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "title": "D-Frag!",
+    "vol": "11",
+    "ch": "84",
+    "img": "/images/d-frag.jpg",
+    "description": "A comedy series...",
+    "details": "The story follows..."
+  },
+  {
+    "id": 2,
+    "title": "My Younger Sister Was a...",
+    "vol": "44",
+    "ch": "84",
+    "img": "/images/My.jpg",
+    "description": "An emotional drama...",
+    "details": "The story focuses on..."
+  },
+  {
+    "id": 3,
+    "title": "Freak Island",
+    "vol": "7",
+    "ch": "42",
+    "img": "./images/island.jpg",
+    "description": "An emotional drama...",
+    "details": "The story focuses on..."
+  },
+  {
+    "id": 4,
+    "title": "Naruto",
+    "vol": "10",
+    "ch": "42",
+    "img": "./images/naruto.jpg",
+    "description": "An emotional drama...",
+    "details": "The story focuses on..."
+  },
+  {
+    "id": 5,
+    "title": "Bubble De House De XXX",
+    "vol": "10",
+    "ch": "42",
+    "img": "./images/bubble_de_house_de_xxx_the_anima.jpg",
+    "description": "An emotional drama...",
+    "details": "The story focuses on..."
+  },
+  {
+    "id": 6,
+    "title": "Shumatsu Hospital",
+    "vol": "10",
+    "ch": "42",
+    "img": "./images/hospital.jpg",
+    "description": "An emotional drama...",
+    "details": "The story focuses on..."
+  },
+  {
+    "id": 7,
+    "title": "Ane Wa Yanmama",
+    "vol": "10",
+    "ch": "42",
+    "img": "./images/Ane.jpg",
+    "description": "An emotional drama...",
+    "details": "The story focuses on..."
+  },
+  {
+    "id": 8,
+    "title": "Hajimete no Hitozuma",
+    "vol": "10",
+    "ch": "43",
+    "img": "./images/Hitozuma.jpg",
+    "description": "An emotional drama...",
+    "details": "The story focuses on..."
+  },
+  {
+    "id": 9,
+    "title": "Attack on Titan",
+    "vol": "102",
+    "ch": "243",
+    "img": "./images/aot.png",
+    "description": "Con soi co doc",
+    "details": "Cai me gi cha duoc"
+  },
+  {
+    "id": 10,
+    "title": "Oni Chichi",
+    "vol": "102",
+    "ch": "243",
+    "img": "./images/Oni-Chichi-Rebuild-Episode-2.jpg",
+    "description": "Con soi co doc",
+    "details": "Cai me gi cha duoc"
+  }
+]
