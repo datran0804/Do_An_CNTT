@@ -22,7 +22,7 @@
     "title": "Freak Island",
     "vol": "7",
     "ch": "42",
-    "img": "./images/island.jpg",
+    "img": "/images/island.jpg",
     "description": "An emotional drama...",
     "details": "The story focuses on..."
   },
@@ -31,7 +31,7 @@
     "title": "Naruto",
     "vol": "10",
     "ch": "42",
-    "img": "./images/naruto.jpg",
+    "img": "/images/naruto.jpg",
     "description": "An emotional drama...",
     "details": "The story focuses on..."
   },
@@ -40,7 +40,7 @@
     "title": "Bubble De House De XXX",
     "vol": "10",
     "ch": "42",
-    "img": "./images/bubble_de_house_de_xxx_the_anima.jpg",
+    "img": "/images/bubble_de_house_de_xxx_the_anima.jpg",
     "description": "An emotional drama...",
     "details": "The story focuses on..."
   },
@@ -49,7 +49,7 @@
     "title": "Shumatsu Hospital",
     "vol": "10",
     "ch": "42",
-    "img": "./images/hospital.jpg",
+    "img": "/images/hospital.jpg",
     "description": "An emotional drama...",
     "details": "The story focuses on..."
   },
@@ -58,7 +58,7 @@
     "title": "Ane Wa Yanmama",
     "vol": "10",
     "ch": "42",
-    "img": "./images/Ane.jpg",
+    "img": "/images/Ane.jpg",
     "description": "An emotional drama...",
     "details": "The story focuses on..."
   },
@@ -67,7 +67,7 @@
     "title": "Hajimete no Hitozuma",
     "vol": "10",
     "ch": "43",
-    "img": "./images/Hitozuma.jpg",
+    "img": "/images/Hitozuma.jpg",
     "description": "An emotional drama...",
     "details": "The story focuses on..."
   },
@@ -76,7 +76,7 @@
     "title": "Attack on Titan",
     "vol": "102",
     "ch": "243",
-    "img": "./images/aot.png",
+    "img": "/images/aot.png",
     "description": "Con soi co doc",
     "details": "Cai me gi cha duoc"
   },
@@ -85,7 +85,7 @@
     "title": "Oni Chichi",
     "vol": "102",
     "ch": "243",
-    "img": "./images/Oni-Chichi-Rebuild-Episode-2.jpg",
+    "img": "/images/Oni-Chichi-Rebuild-Episode-2.jpg",
     "description": "Con soi co doc",
     "details": "Cai me gi cha duoc"
   }

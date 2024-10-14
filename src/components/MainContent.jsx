@@ -23,7 +23,7 @@ function MainContent() {
       <div className="grid grid-cols-8 gap-4">
         {items.map((item) => (
           <Link
-            to={`/details/${item.id}`}
+            to={`/details/ ${item.id}`}
             key={item.id}
             className="block bg-white shadow-md p-4"
           >
