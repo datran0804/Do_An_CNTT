@@ -35,6 +35,11 @@ function DetailPage() {
     return <div>Loading...</div>;
   }
 
+  // Điều chỉnh đường dẫn hình ảnh
+  const imgSrc = details.img.startsWith("http") 
+  ? details.img 
+  : `/details/images/${details.img}`;
+
   console.log("Details:", details); // Log chi tiết của item
   console.log("Image Source:", details.img); // Log đường dẫn hình ảnh
 
@@ -42,7 +47,7 @@ function DetailPage() {
     <div className="w-full h-full">
       <img src={details.im} alt="" />
       <h1>{details.title}</h1>
-      <img src={details.img} /> {/* Hiển thị hình ảnh */}
+      <img src={details.img} style={{ width: "300px", height: "400px", objectFit: "cover" }} /> {/* Hiển thị hình ảnh */}
       <p>{details.description}</p>
       <p>Volume: {details.vol}</p>
       <p>Chapter: {details.ch}</p>
