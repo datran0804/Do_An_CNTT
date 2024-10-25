@@ -1,22 +1,28 @@
-// Bước 1: Import các gói cần thiết
 const express = require('express');
+const mongoose = require('mongoose');
+const bodyParser = require('body-parser');
+const userRoutes = require('./routes/infoRoutes');
+
 const app = express();
-const port = 3000; // Chọn cổng để chạy server
+const PORT = 3000;
 
-// Bước 2: Middleware (Nếu bạn muốn xử lý JSON requests)
-app.use(express.json());
+// Kết nối MongoDB
+mongoose.connect('mongodb://localhost:27017/comic')
+  .then(() => console.log('Kết nối MongoDB thành công'))
 
-// Bước 3: Định nghĩa các route (Ví dụ một route đơn giản)
+  .catch((err) => console.error('Không thể kết nối MongoDB', err));
+
+
+// Middleware
+app.use(bodyParser.json());
+app.use('/info', userRoutes);
+
+// Route mặc định
 app.get('/', (req, res) => {
-  res.send('Hello World!'); // Trả về câu trả lời khi truy cập đường dẫn '/'
+    res.send('API is running');
 });
 
-// Thêm một route khác (Ví dụ trả về thông tin JSON)
-app.get('/api/data', (req, res) => {
-  res.json({ message: 'Đây là API trả về JSON', status: 200 });
-});
-
-// Bước 4: Lắng nghe cổng và khởi chạy server
-app.listen(port, () => {
-  console.log(`Server đang chạy tại http://localhost:${port}`);
+// Lắng nghe server
+app.listen(PORT, () => {
+  console.log(`Server đang chạy tại http://localhost:${PORT}`);
 });

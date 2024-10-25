@@ -5,8 +5,8 @@ function MainContent() {
   const [items, setItems] = useState([]);
 
   useEffect(() => {
-    // Fetch dữ liệu từ file JSON (đảm bảo file này nằm trong thư mục public)
-    fetch("/updates.json")
+    // Fetch dữ liệu từ backend API
+    fetch("http://localhost:5000/api/info")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch data");
@@ -23,11 +23,10 @@ function MainContent() {
       <div className="grid grid-cols-8 gap-4">
         {items.map((item) => (
           <Link
-            to={`/details/ ${item.id}`}
-            key={item.id}
+            to={`/details/${item._id}`} // Sử dụng _id từ MongoDB
+            key={item._id} // Sử dụng _id làm key
             className="block bg-white shadow-md p-4"
           >
-            {/* Bọc toàn bộ item bên trong Link */}
             <img src={item.img} alt={item.title} className="w-32 h-48 mb-2" />
             <h3 className="text-lg font-bold">{item.title}</h3>
             <p>

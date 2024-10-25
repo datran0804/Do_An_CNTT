@@ -1,0 +1,62 @@
+----------------------------------------------------------------
+npm init -y
+npm install mongoose
+npm install cors //Add DL
+----------------------------------------------------------------
+server.js:
+
+const cors = require('cors');
+app.use(cors());
+----------------------------------------------------------------
+branch folder:
+
+backend
+├── config/
+│   ├── db.js
+├── controllers/
+│   ├── infoControllers.js
+├── models/
+│   ├── Counter.js (đếm id cho tang lần lượt)
+│   ├── Info.js
+├── node_modules/
+│   └── ...
+├── routes/
+│   ├── infoRoutes.js
+├── package-lock.json
+├── package.json
+├── server.js
+└── ...
+
+==========================================================
+
+frontend
+├── node_modules/
+│   └── ...
+├── public/
+│   ├── images/
+│   │		└── ...
+│   ├── updates.json
+│   ├── vite.svg
+├── src/
+│   ├── assets/
+│   │		└── react.svg
+│   ├── components/
+│   │   ├── DetailPage.jsx
+│   │   ├── Footer.jsx
+│   │   ├── header.jsx
+│   │   ├── HomePage.jsx
+│   │   ├── MainContent.jsx
+│   │   ├── SideBar.jsx
+│   ├── App.jsx
+│   ├── index.jsx
+│   ├── main.jsx
+├── .gitignore
+├── eslint.config.js
+├── index.html
+├── package-lock.json
+├── package.json
+├── postcss.config.js
+├── README
+├── tailwind.config.js
+├── vite.config.js
+└── ...

@@ -7,7 +7,8 @@ function DetailPage() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("/updates.json")
+    // Fetch dữ liệu từ API dựa trên ID
+    fetch(`http://localhost:5000/api/info/${id}`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch data");
@@ -15,11 +16,8 @@ function DetailPage() {
         return response.json();
       })
       .then((data) => {
-        console.log("Fetched data:", data); // Log dữ liệu đã fetch
-        const selectedItem = data.find((item) => item.id === parseInt(id));
-        console.log("Selected Item:", selectedItem); // Log item đã chọn
-        if (selectedItem) {
-          setDetails(selectedItem);
+        if (data) {
+          setDetails(data); // Lưu dữ liệu vào state
         } else {
           setError(`Could not find item with id: ${id}`);
         }
@@ -35,19 +33,19 @@ function DetailPage() {
     return <div>Loading...</div>;
   }
 
-  // Điều chỉnh đường dẫn hình ảnh
+  // Điều chỉnh đường dẫn hình ảnh (nếu cần)
   const imgSrc = details.img.startsWith("http") 
-  ? details.img 
-  : `/details/images/${details.img}`;
-
-  console.log("Details:", details); // Log chi tiết của item
-  console.log("Image Source:", details.img); // Log đường dẫn hình ảnh
+    ? details.img 
+    : `/details/images/${details.img}`;
 
   return (
     <div className="w-full h-full">
-      <img src={details.im} alt="" />
       <h1>{details.title}</h1>
-      <img src={details.img} style={{ width: "300px", height: "400px", objectFit: "cover" }} /> {/* Hiển thị hình ảnh */}
+      <img 
+        src={details.img} 
+        alt={details.title} 
+        style={{ width: "300px", height: "400px", objectFit: "cover" }} 
+      /> {/* Hiển thị hình ảnh */}
       <p>{details.description}</p>
       <p>Volume: {details.vol}</p>
       <p>Chapter: {details.ch}</p>
