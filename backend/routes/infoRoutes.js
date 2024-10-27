@@ -1,6 +1,7 @@
 const express = require('express');
-const { getAllInfo, createInfo, getInfoById, updateInfo, deleteInfo } = require('../controllers/infoController');
 const router = express.Router();
+
+const infoController = require('../controllers/infoController')
 
 
 // function getFormattedDate() {
@@ -26,18 +27,18 @@ const router = express.Router();
 
 
 // Lấy danh sách truyện
-router.get('/', getAllInfo);
+router.get('/', infoController.getAllInfo);
 
 // Route để tạo tài liệu mới
-router.post('/', createInfo);
+router.post('/', infoController.createInfo);
 
 // Route để lấy tài liệu theo ID
-router.get('/:id', getInfoById);
+router.get('/:id', infoController.getInfoById);
 
 // Route để cập nhật tài liệu theo ID
-router.put('/:id', updateInfo);
+router.put('/:id', infoController.updateInfo);
 
 // Route để xóa tài liệu theo ID
-router.delete('/:id', deleteInfo);
+router.delete('/:id', infoController.deleteInfo);
 
 module.exports = router;
