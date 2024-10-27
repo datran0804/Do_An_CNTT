@@ -16,7 +16,7 @@ connectDB();
 app.use(express.json());
 
 // Sử dụng route cho các yêu cầu liên quan tới "info"
-app.use('/api/info', infoRoutes);
+app.use('/api/comics', infoRoutes);
 
 // Khởi động server
 const PORT = process.env.PORT || 5000;

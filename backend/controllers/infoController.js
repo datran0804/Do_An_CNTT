@@ -1,5 +1,5 @@
 // controllers/infoController.js
-const Info = require('../models/Info');
+const Info = require('../models/comics');
 
 // Lấy tất cả tài liệu trong collection 'info'
 const getAllInfo = async (req, res) => {

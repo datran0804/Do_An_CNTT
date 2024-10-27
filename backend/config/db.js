@@ -2,6 +2,8 @@
 const mongoose = require('mongoose');
 
 // Thay đổi chuỗi kết nối theo thông tin của bạn
+{'mongodb+srv://vudat:vudat@cluster0.axa9w.mongodb.net/dat?retryWrites=true&w=majority&appName=Cluster0'}
+//Check IP: https://www.whatismyip.com/
 const uri = 'mongodb+srv://vudat:vudat@cluster0.axa9w.mongodb.net/dat?retryWrites=true&w=majority&appName=Cluster0'; 
 
 const connectDB = async () => {

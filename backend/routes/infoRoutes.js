@@ -1,4 +1,5 @@
 const express = require('express');
+const Info = require('../models/comics');
 const { getAllInfo, createInfo, getInfoById, updateInfo, deleteInfo } = require('../controllers/infoController');
 const router = express.Router();
 
@@ -39,5 +40,17 @@ router.put('/:id', updateInfo);
 
 // Route để xóa tài liệu theo ID
 router.delete('/:id', deleteInfo);
+
+router.get('/search', async (req, res) => {
+    try {
+      const query = req.query.q; // Lấy giá trị từ query parameter 'q'
+      const results = await Info.find({
+        title: { $regex: query, $options: 'i' } // Tìm kiếm theo tiêu đề (không phân biệt hoa thường)
+      });
+      res.json(results); // Trả về kết quả tìm kiếm
+    } catch (error) {
+      res.status(500).json({ message: 'Lỗi server: ' + error.message });
+    }
+  });
 
 module.exports = router;

@@ -30,6 +30,6 @@ infoSchema.pre('save', async function (next) {
   next();
 });
 
-const Info = mongoose.model('Info', infoSchema);
+const Info = mongoose.model('comics', infoSchema);
 
 module.exports = Info;

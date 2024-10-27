@@ -2,6 +2,7 @@ import React, { useState } from "react";
 
 function Header() {
   const [searchQuery, setSearchQuery] = useState("");
+  const [searchResults, setSearchResults] = useState([]);
 
   const handleSearchChange = (e) => {
     setSearchQuery(e.target.value);

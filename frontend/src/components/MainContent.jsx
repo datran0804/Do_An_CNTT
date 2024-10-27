@@ -6,7 +6,7 @@ function MainContent() {
 
   useEffect(() => {
     // Fetch dữ liệu từ backend API
-    fetch("http://localhost:5000/api/info")
+    fetch("http://localhost:5000/api/comics")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch data");
