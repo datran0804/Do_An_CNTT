@@ -1,7 +1,7 @@
 // server.js
 const express = require('express');
 const connectDB = require('./config/db'); // Import kết nối MongoDB
-const infoRoutes = require('./routes/infoRoutes'); // Import routes cho info
+const comicsRoutes = require('./routes/comicsRoutes'); // Import routes cho info
 
 const app = express();
 
@@ -15,8 +15,8 @@ connectDB();
 // Middleware để phân tích cú pháp JSON
 app.use(express.json());
 
-// Sử dụng route cho các yêu cầu liên quan tới "info"
-app.use('/api/comics', infoRoutes);
+// Sử dụng route cho các yêu cầu liên quan tới "comics"
+app.use('/api/comics', comicsRoutes);
 
 // Khởi động server
 const PORT = process.env.PORT || 5000;

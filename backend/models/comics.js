@@ -1,7 +1,8 @@
 const mongoose = require('mongoose');
 const Counter = require('./Counter');
 
-const infoSchema = new mongoose.Schema({
+// Đổi tên schema từ infoSchema sang comicsSchema
+const comicsSchema = new mongoose.Schema({
   id: { type: Number, unique: true },
   title: { type: String, required: true },
   vol: { type: String, required: true },
@@ -23,13 +24,13 @@ async function getNextSequenceValue(sequenceName) {
 }
 
 // Middleware để tự động gán id
-infoSchema.pre('save', async function (next) {
+comicsSchema.pre('save', async function (next) {
   if (this.isNew) {
-    this.id = await getNextSequenceValue('infoId'); // Gọi hàm để lấy id mới
+    this.id = await getNextSequenceValue('comicsId');
   }
   next();
 });
 
-const Info = mongoose.model('comics', infoSchema);
+const Comic = mongoose.model('comics', comicsSchema);
 
-module.exports = Info;
+module.exports = Comic;
