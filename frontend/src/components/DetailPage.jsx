@@ -8,7 +8,7 @@ function DetailPage() {
 
   useEffect(() => {
     // Fetch dữ liệu từ API dựa trên ID
-    fetch(`http://localhost:5000/api/info/${id}`)
+    fetch(`http://localhost:5000/api/comics/${id}`)
       .then((response) => {
         if (!response.ok) {
           throw new Error("Failed to fetch data");
@@ -34,18 +34,19 @@ function DetailPage() {
   }
 
   // Điều chỉnh đường dẫn hình ảnh (nếu cần)
-  const imgSrc = details.img.startsWith("http") 
-    ? details.img 
+  const imgSrc = details.img.startsWith("http")
+    ? details.img
     : `/details/images/${details.img}`;
 
   return (
     <div className="w-full h-full">
       <h1>{details.title}</h1>
-      <img 
-        src={details.img} 
-        alt={details.title} 
-        style={{ width: "300px", height: "400px", objectFit: "cover" }} 
-      /> {/* Hiển thị hình ảnh */}
+      <img
+        src={details.img}
+        alt={details.title}
+        style={{ width: "300px", height: "400px", objectFit: "cover" }}
+      />{" "}
+      {/* Hiển thị hình ảnh */}
       <p>{details.description}</p>
       <p>Volume: {details.vol}</p>
       <p>Chapter: {details.ch}</p>
