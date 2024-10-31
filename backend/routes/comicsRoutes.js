@@ -1,6 +1,6 @@
 const express = require('express');
 const Info = require('../models/Comics');
-const { getAllComics, createComic, getComicById, updateComic, deleteComic } = require('../controllers/comicsController');
+const comicsController = require('../controllers/comicsController');
 const router = express.Router();
 
 
@@ -27,19 +27,19 @@ const router = express.Router();
 
 
 // Lấy danh sách truyện
-router.get('/', getAllComics);
+router.get('/', comicsController.getAllComics);
 
 // Route để tạo tài liệu mới
-router.post('/', createComic);
+router.post('/', comicsController.createComic);
 
 // Route để lấy tài liệu theo ID
-router.get('/:id', getComicById);
+router.get('/:id', comicsController.getComicById);
 
 // Route để cập nhật tài liệu theo ID
-router.put('/:id', updateComic);
+router.put('/:id', comicsController.updateComic);
 
 // Route để xóa tài liệu theo ID
-router.delete('/:id', deleteComic);
+router.delete('/:id', comicsController.deleteComic);
 
 router.get('/search', async (req, res) => {
     try {
